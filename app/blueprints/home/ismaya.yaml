@@ -1,0 +1,35 @@
+uuid: f100f4bf-664d-42cb-b5b6-af412c52c3d9
+handle: Home\Ismaya
+type: stream
+name: Ismaya
+drafts: false
+
+navigation:
+    icon: icon-file
+    parent: Home\Post
+    order: 10
+
+fields:
+    description:
+        tab: Edit
+        label: Content
+        type: richeditor
+        span: adaptive
+
+    tanggal:
+        tab: Manage
+        label: Tanggal
+        type: text
+        span: small
+
+    waktu:
+        tab: Manage
+        label: Waktu
+        type: text
+        span: small
+
+    lokasi:
+        tab: Manage
+        label: Lokasi
+        type: text
+        span: small

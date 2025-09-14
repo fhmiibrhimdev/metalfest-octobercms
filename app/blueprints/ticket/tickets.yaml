@@ -1,0 +1,35 @@
+uuid: 1aa1fc61-3057-47c3-a24a-220b2f833d89
+handle: Ticket\Tickets
+type: stream
+name: Tickets
+drafts: false
+
+primaryNavigation:
+    label: Ticket
+    icon: icon-ticket
+    order: 130
+
+navigation:
+    icon: icon-bookmark
+    parent: Ticket\Tickets
+    order: 10
+
+fields:
+    ticket:
+        tab: Manage
+        label: Ticket
+        type: text
+        span: small
+
+    harga:
+        tab: Manage
+        label: Harga
+        type: text
+        span: small
+
+    categories:
+        tab: Manage
+        label: Categories
+        commentAbove: 'Select categories the ticket belongs to'
+        type: entries
+        source: Ticket\Category

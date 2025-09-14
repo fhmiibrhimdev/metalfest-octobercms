@@ -1,0 +1,29 @@
+uuid: 0ce328c2-6afe-4f35-9774-6dd7ba2874dc
+handle: Home\Post
+type: stream
+name: Post
+drafts: false
+
+primaryNavigation:
+    label: Home
+    icon: octo-icon-home
+    order: 130
+
+navigation:
+    icon: icon-bookmark
+    parent: Home\Post
+    order: 10
+
+fields:
+    content:
+        tab: Edit
+        label: Content
+        type: richeditor
+        span: adaptive
+        
+    banner:
+        tab: Manage
+        label: Banner
+        types: fileupload
+        mode: image
+        maxFiles: 1

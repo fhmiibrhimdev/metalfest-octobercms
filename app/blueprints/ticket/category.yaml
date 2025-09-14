@@ -1,0 +1,17 @@
+uuid: 02dc0833-3e1f-468a-afe2-d9fc161da237
+handle: Ticket\Category
+type: structure
+name: Category
+drafts: false
+
+structure:
+    maxDepth: 1
+
+navigation:
+    icon: icon-tree
+    parent: Ticket\Tickets
+    order: 10
+
+fields:
+    description:
+        label: Description

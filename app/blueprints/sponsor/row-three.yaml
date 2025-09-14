@@ -1,0 +1,17 @@
+uuid: ef4a8c92-356e-42bf-8012-5d9cb031b13d
+handle: Sponsor\Three
+type: stream
+name: Three
+drafts: false
+
+navigation:
+    icon: icon-cloud-upload
+    parent: Sponsor\One
+    order: 10
+
+fields:
+    image:
+        tab: Manage
+        label: Link Image
+        type: text
+        span: small

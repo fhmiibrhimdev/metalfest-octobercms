@@ -1,0 +1,51 @@
+url = "/line-up"
+layout = "default"
+title = "Line Up"
+
+[collection lineupOne]
+handle = "Lineup\One"
+
+[collection lineupTwo]
+handle = "Lineup\Two"
+
+[collection lineupThree]
+handle = "Lineup\Three"
+==
+<div class="tw-mt-14 tw-mb-32">
+    <div class="container">
+        <h1 class="tw-text-6xl tw-font-bold tw-text-center">Line up</h1>
+    </div>
+    <div class="container">
+        <div class="row tw-mt-28 tw-text-left">
+        {% for one in lineupOne %}
+            <div class="col-lg-4">
+                <a href="{{ one.link }}" target="_BLANK" class="tw-text-4xl tw-font-bold hover:tw-text-red-800">{{ one.guest_star }}</a>
+                <img src="{{ one.image }}" class="tw-mt-5 tw-rounded-lg tw-shadow-md tw-shadow-gray-300 tw-object-fit tw-w-[416px] tw-h-[273px]" alt="">
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="tw-bg-gray-200">
+    <center>
+        <div class="row tw-mt-32 tw-text-left tw-w-full tw-h-full">
+            {% for two in lineupTwo %}
+            <div class="col-lg-3 tw-mt-10 tw-mb-20">
+                <a href="{{ two.link }}" target="_BLANK" class="tw-text-4xl tw-font-bold hover:tw-text-red-800">{{ two.guest_star }}</a>
+                <img src="{{ two.image }}" class="tw-mt-5 tw-rounded-lg tw-shadow-md tw-shadow-gray-300 tw-object-fit tw-w-[416px] tw-h-[273px]" alt="">
+            </div>
+            {% endfor %}
+        </div>
+    
+    </center>
+    </div>
+    <div class="container">
+        <div class="row tw-mt-32 tw-text-left">
+            {% for three in lineupThree %}
+            <div class="col-lg-4">
+                <a href="{{ three.link }}" target="_BLANK" class="tw-text-4xl tw-font-bold hover:tw-text-red-800">{{ three.guest_star }}</a>
+                <img src="{{ three.image }}" class="tw-mt-5 tw-rounded-lg tw-shadow-md tw-shadow-gray-300 tw-object-fit tw-w-[416px] tw-h-[273px]" alt="">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

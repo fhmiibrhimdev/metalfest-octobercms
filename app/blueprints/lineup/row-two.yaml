@@ -1,0 +1,29 @@
+uuid: e9d5c8e6-9c4a-40a0-8cd3-e4a6dd16f4e0
+handle: Lineup\Two
+type: stream
+name: Two
+drafts: false
+
+navigation:
+    icon: icon-cloud-upload
+    parent: Lineup\One
+    order: 10
+
+fields:
+    guest_star:
+        tab: Manage
+        label: Guest Star
+        type: text
+        span: small
+
+    image:
+        tab: Manage
+        label: Link Image
+        type: text
+        span: small
+
+    link:
+        tab: Manage
+        label: Link IG
+        type: text
+        span: small

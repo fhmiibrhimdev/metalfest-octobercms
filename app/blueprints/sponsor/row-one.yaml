@@ -1,0 +1,22 @@
+uuid: c0a51d03-3de8-4284-8946-c6d52d4757fa
+handle: Sponsor\One
+type: stream
+name: One
+drafts: false
+
+primaryNavigation:
+    label: Sponsor
+    icon: icon-file-image-o
+    order: 130
+
+navigation:
+    icon: icon-cloud-upload
+    parent: Sponsor\One
+    order: 10
+
+fields:
+    image:
+        tab: Manage
+        label: Link Image
+        type: text
+        span: small

@@ -1,0 +1,81 @@
+url = "/sponsor"
+layout = "default"
+title = "Sponsor"
+
+[collection ones]
+handle = "Sponsor\One"
+
+[collection twos]
+handle = "Sponsor\Two"
+
+[collection threes]
+handle = "Sponsor\Three"
+
+[collection sponsors]
+handle = "Sponsor\Sponsor"
+==
+<div class="tw-mt-20 tw-mb-32">
+    <div class="container">
+        <h1 class="tw-text-6xl tw-text-center tw-font-bold">Sponsor & Medpart</h1>
+    </div>
+    <div class="container">
+        <div class="tw-text-center tw-mt-40">
+            <center>
+                <div class="row">
+                    {% for one in ones %}
+                    <div class="col-lg-4">
+                        <img src="{{ one.image }}" class="tw-w-[300px]" alt="">
+                    </div>
+                    {% endfor %}
+                </div>
+            </center>
+        </div>
+     </div>
+     <div class="tw-bg-gray-50 tw-mt-40 tw-py-10 tw-w-full tw-text-white">
+        <div class="tw-overflow-hidden">
+          <div class="tw-flex tw-whitespace-nowrap tw-animate-marquee tw-space-x-20">
+            {% for sponsor in sponsors %}
+            <img src="{{ sponsor.image }}" class="tw-w-[300px] tw-h-[250px] tw-object-contain" alt="">
+            {% endfor %}
+            <!-- tambahkan lebih banyak jika perlu -->
+          </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="tw-text-center tw-mt-40">
+            <center>
+                <div class="row">
+                    {% for two in twos %}
+                    <div class="col-lg-6">
+                        <img src="{{ two.image }}" class="tw-w-[300px]" alt="">
+                    </div>
+                    {% endfor %}
+                </div>
+            </center>
+        </div>
+     </div>
+     <div class="tw-bg-gray-50 tw-mt-40 tw-py-10 tw-w-full tw-text-white">
+        <div class="tw-overflow-hidden">
+          <div class="tw-flex tw-whitespace-nowrap tw-animate-marquee tw-space-x-20">
+            {% for sponsor in sponsors %}
+            <img src="{{ sponsor.image }}" class="tw-w-[300px] tw-h-[250px] tw-object-contain" alt="">
+            {% endfor %}
+            <!-- tambahkan lebih banyak jika perlu -->
+          </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="tw-text-center tw-mt-40">
+            <center>
+                <div class="row">
+                    {% for three in threes %}
+                    <div class="col-lg-12">
+                        <img src="{{ three.image }}"  alt="">
+                    </div>
+                    {% endfor %}
+                </div>
+            </center>
+        </div>
+     </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+uuid: 264ced8e-1c72-452a-bcc5-c247f4f8f27d
+handle: Contact\Information
+type: stream
+name: Information
+drafts: false
+
+primaryNavigation:
+    label: Contact
+    icon: icon-microphone
+    order: 130
+
+navigation:
+    icon: icon-bookmark
+    parent: Contact\Information
+    order: 10
+
+fields:
+    icon:
+        tab: Manage
+        label: Icon
+        type: text
+        span: small
+
+    text:
+        tab: Manage
+        label: Text
+        type: text
+        span: small

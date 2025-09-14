@@ -1,0 +1,15 @@
+uuid: 9eeeeb12-8bd5-44df-9611-f0a134135ba7
+handle: Ticket\Other
+type: stream
+name: Other Information
+drafts: false
+
+navigation:
+    icon: icon-circle-o
+    parent: Ticket\Tickets
+    order: 10
+
+fields:
+    description:
+        tab: Manage
+        label: Link Image

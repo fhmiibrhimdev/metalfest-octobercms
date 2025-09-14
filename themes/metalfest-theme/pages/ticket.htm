@@ -1,0 +1,94 @@
+url = "/ticket"
+layout = "default"
+title = "Ticket"
+
+[collection tickets]
+handle = "Ticket\Tickets"
+
+[collection others]
+handle = "Ticket\Other"
+==
+<div class="tw-mt-14 tw-mb-32">
+    <div class="container">
+        <h1 class="tw-text-6xl tw-text-center tw-font-bold">Tickets</h1>
+        <hr class="tw-w-48 tw-h-1 tw-mx-auto tw-my-12 tw-bg-red-700 tw-border-0 tw-rounded-sm">
+        <div class="row align-items-stretch">
+            {% for ticket in tickets %}
+              <div class="col-lg-4 mb-4">
+                <div class="tw-bg-white tw-px-4 tw-py-3 tw-rounded-lg tw-shadow-md tw-shadow-gray-300 d-flex flex-column h-100">
+                  <div class="tw-text-center tw-flex-grow">
+                    <h2 class="tw-font-bold tw-mt-4 tw-text-xl tw-text-red-600">{{ ticket.ticket }}</h2>
+                    <p class="tw-mt-6 tw-mb-6 tw-text-4xl tw-font-bold">Rp{{ ticket.harga }}</p>
+                    <hr class="tw-my-4">
+                    <div class="tw-text-left">
+                    {% for category in ticket.categories %}
+                      <p class="tw-ml-3 tw-mt-4">
+                        <i class="fas fa-check tw-text-red-600 tw-mr-3"></i>
+                        {{ category.title }}
+                      </p>
+                    {% endfor %}
+                    </div>
+                  </div>
+                  <a href="#pembayaran" class="btn btn-outline-danger tw-w-full tw-mt-5 tw-mb-5">BUY</a>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="tw-bg-white tw-mt-20">
+        <div class="container">
+            <p>&nbsp;</p>
+            <h1 class="tw-text-5xl tw-text-center tw-my-10 tw-font-bold" id="pembayaran">FORM PEMBAYARAN</h1>
+            <div class="row">
+                <div class="col-lg-8">
+                    <form action="#" class="tw-mt-20">
+                        <div class="form-group tw-mt-4">
+                            <label class="tw-mb-1 tw-font-semibold" for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" class="form-control tw-rounded-lg">
+                        </div>
+                        <div class="form-group tw-mt-4">
+                            <label class="tw-mb-1 tw-font-semibold" for="email">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-control tw-rounded-lg">
+                        </div>
+                        <div class="form-group tw-mt-4">
+                            <label class="tw-mb-1 tw-font-semibold" for="no_telp">No. Telp</label>
+                            <input type="text" id="no_telp" name="no_telp" class="form-control tw-rounded-lg">
+                        </div>
+                        <div class="form-group tw-mt-4">
+                            <label class="tw-mb-1 tw-font-semibold" for="kategori">Kategori Tiket</label>
+                            <select id="kategori" name="kategori" class="form-control tw-rounded-lg">
+                                <option value="">-- Opsi Pilihan --</option>
+                                <option value="FESTIVAL PASS">FESTIVAL PASS</option>
+                                <option value="VIP PAS">VIP PAS</option>
+                                <option value="VVIP EXPERIENCE PASS">VVIP EXPERIENCE PASS</option>
+                            </select>
+                        </div>
+                        <div class="form-group tw-mt-4">
+                            <label class="tw-mb-1 tw-font-semibold" for="jumlah">Jumlah Tiket</label>
+                            <input type="number" id="jumlah" name="jumlah" class="form-control tw-rounded-lg">
+                        </div>
+                        <button id="resetBtn" type="reset" class="btn btn-outline-danger tw-w-full tw-mt-8">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tw-mt-20 tw-ml-4">
+                        <h2 class="tw-text-xl tw-font-bold">Informasi Lainnya</h2>
+                        <div class="tw-space-y-4 tw-mt-4">
+                            {% for other in others %}
+                            <p>{{ other.title }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+
+<script>
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    // Scroll ke atas form (atau pakai window.scrollTo jika mau ke atas halaman)
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>

@@ -1,0 +1,29 @@
+uuid: 442cb62d-3f49-45c1-88cb-1b956849469f
+handle: Lineup\Three
+type: stream
+name: Three
+drafts: false
+
+navigation:
+    icon: icon-cloud-upload
+    parent: Lineup\One
+    order: 10
+
+fields:
+    guest_star:
+        tab: Manage
+        label: Guest Star
+        type: text
+        span: small
+
+    image:
+        tab: Manage
+        label: Link Image
+        type: text
+        span: small
+
+    link:
+        tab: Manage
+        label: Link IG
+        type: text
+        span: small

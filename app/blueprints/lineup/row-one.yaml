@@ -1,0 +1,34 @@
+uuid: dbf09dfd-4571-4a01-907b-9777312fe803
+handle: Lineup\One
+type: stream
+name: One
+drafts: false
+
+primaryNavigation:
+    label: Lineup
+    icon: octo-icon-calendar
+    order: 130
+
+navigation:
+    icon: icon-cloud-upload
+    parent: Lineup\One
+    order: 10
+
+fields:
+    guest_star:
+        tab: Manage
+        label: Guest Star
+        type: text
+        span: small
+
+    image:
+        tab: Manage
+        label: Link Image
+        type: text
+        span: small
+
+    link:
+        tab: Manage
+        label: Link IG
+        type: text
+        span: small

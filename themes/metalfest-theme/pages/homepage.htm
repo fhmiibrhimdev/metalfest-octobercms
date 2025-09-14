@@ -1,0 +1,56 @@
+url = "/"
+layout = "default"
+title = "Home"
+
+[collection home]
+handle = "Home\Post"
+
+[collection ismaya]
+handle = "Home\Ismaya"
+==
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://assets.onecompiler.app/43j3f2yfk/43m2xpga3/bb.png" class="tw-w-full" alt="...">
+            {# <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div> #}
+        </div>
+    </div>
+</div>
+<div class="container tw-text-center tw-mb-20">
+{% for homePost in home %}
+    
+    <h1 class="tw-text-6xl tw-mt-16 tw-font-bold">{{ homePost.title }}</h1>
+    <div class="tw-text-lg tw-text-justify tw-mt-16">{{ homePost.content|raw }}</div>
+    {# <p class="tw-text-lg tw-text-justify tw-mt-5">Selama satu hari penuh, pengunjung akan disuguhi penampilan eksplosif dari band-band metal legendaris internasional dan kebanggaan tanah air, membawakan setlist terbaik mereka dalam atmosfer yang intens dan penuh adrenalin.</p>
+    <p class="tw-text-lg tw-text-justify tw-mt-5">Tak hanya sekedar konser, METALFEST adalah perayaan budaya metal di mana semangat komunitas, musik keras, dan gaya hidup underground menyatu dalam satu ruang yang membara.</p> #}
+{% endfor %}
+</div>
+<div class="container tw-mb-40">
+    <a href="{{ 'https://www.ismayalive.com/about'}}" target="_BLANK">
+        <img src="https://www.ismayalive.com/assets/images/IsmayaLIVE-Logo-4c.svg" class="tw-w-1/4" alt="">
+    </a>
+    {% for homeIsmaya in ismaya %}
+    <div class="tw-text-lg tw-text-justify tw-mt-10">{{ homeIsmaya.description|raw }}</div>
+        <div class="tw-mt-7 tw-rounded-lg tw-bg-white tw-px-5 tw-py-5 tw-w-full tw-shadow-md tw-shadow-gray-300">
+            <div class="row">
+                <div class="col-lg-5">
+                    <p class="tw-text-lg tw-text-justify"><b>Tanggal:</b> {{ homeIsmaya.tanggal }}</p>
+                </div>
+                <div class="col-lg-7">
+                    <p class="tw-text-lg tw-text-justify"><b>Waktu:</b> {{ homeIsmaya.waktu }}</p>
+                </div>
+            </div>
+            <p class="tw-text-lg tw-text-justify tw-mt-7 tw-mb-5"><b>Lokasi:</b> <br>Jakarta International Expo, RW.10, Pademangan Tim., Kec. Pademangan, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 14410</p>
+            <iframe src="{{ homeIsmaya.lokasi }}" height="700" width="100%"></iframe>
+        </div>
+    </div>
+    
+    
+    {% endfor %}
+</div>
